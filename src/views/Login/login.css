@@ -74,6 +74,29 @@
     font-weight: bold;
 }
 
+.ant-checkbox-checked .ant-checkbox-inner {
+    background-color: #1b27af !important;
+    border-color: #1b27af !important;
+}
+
+.ant-divider-plain.ant-divider-with-text {
+    color: rgb(152 152 152 / 85%) !important;
+    font-weight: 500 !important; 
+}
+
+.signup-form-google div{
+
+}
+
+.signup-form-google img{
+    height: 27px;
+}
+
+.signup-form-google h6{
+    font-size: 0.8em;
+    margin-top: 0.6em;
+}
+
 @media only screen and (max-width: 768px){
     .login-container .left-side{
         display: none;

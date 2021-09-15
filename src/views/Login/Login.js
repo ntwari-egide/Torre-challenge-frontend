@@ -52,11 +52,13 @@ const LoginComponent = () => {
                         <p className="red_color italic font-bold forgot-pass">Forgot password?</p>
 
                         <Form.Item>
-                            <Button className="submit-button">Submit</Button>
+                            <Button className="submit-button">Login</Button>
                         </Form.Item>
                         </Form>
 
                         <p className="goto-link poppins_font text-center">Don't have an account? <Link to={'/signup'}> Signup</Link> </p>
+
+                        
 
                     {/* end of loin form content */}
 
