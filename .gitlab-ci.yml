@@ -1,0 +1,36 @@
+workflow:
+  rules:
+    - if: $CI_MERGE_REQUEST_ID
+
+stages: 
+  - build
+  - lint
+  - test
+
+build-job:
+  stage: build
+  image: node:latest
+  script: 
+    - echo "Start building App"
+    - npm install
+    - npm run build
+    - echo "Build successfully!"
+
+
+Lint-job:
+  stage: lint
+  image: node:latest
+  script:
+  - echo "Start eslint checking"
+  - npm install
+  - npm run lint
+  - echo "Eslint checking is successfully done!"
+
+Unit-test: 
+  stage: test
+  image: node:latest
+  script: 
+    - echo "Start testing component"
+    - npm install
+    - npm run test
+    - echo "Testing is successfully done!"
