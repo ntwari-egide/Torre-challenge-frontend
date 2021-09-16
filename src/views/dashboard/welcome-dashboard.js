@@ -146,7 +146,7 @@ const WelcomeDashboard = () => {
 
     const [collapsed,setcollapsed] = useState(false)
 
-    const [darkmode,setdarkmode] = useState('dark')
+    const [darkmode,setdarkmode] = useState('light')
 
     const themechange = () => {
         if(darkmode === 'dark') setdarkmode('light')
