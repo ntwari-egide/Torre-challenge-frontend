@@ -1,11 +1,7 @@
 import React,{useEffect,useState} from "react"
 import { Layout, Menu, Breadcrumb, Col, Row, Input,Slider, Carousel } from 'antd';
 import { Bar } from "nivo";
-import {
-  DesktopOutlined,
-  PieChartOutlined,
-  FileOutlined
-} from '@ant-design/icons';
+import { useMediaQuery } from 'react-responsive'
 import "./dashboard.css"
 import HomeSvg from "../../assets/Icon ionic-md-home.svg"
 import AppointmentSvg from '../../assets/Icon ionic-ios-calendar.svg'
@@ -19,7 +15,29 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Responsi
 const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
+
 const WelcomeDashboard = () => {
+
+    const isMobileDevice = useMediaQuery({
+        query: "(min-device-width: 480px)",
+        query: "(max-device-width: 600px)"
+    });
+
+    const isTabletDevice = useMediaQuery({
+        query: "(min-device-width: 768px)",
+    });
+
+    const isLaptop = useMediaQuery({
+        query: "(min-device-width: 1024px)",
+    });
+
+    const isDesktop = useMediaQuery({
+        query: "(min-device-width: 1200px)",
+    });
+
+    const isBigScreen = useMediaQuery({
+        query: "(min-device-width: 1201px )",
+    });
 
     const data = [
         {
@@ -140,6 +158,8 @@ const WelcomeDashboard = () => {
     };
 
     const collapsedChange = () => { setcollapsed(!collapsed)}
+
+    useEffect(() =>  {if(isMobileDevice) setcollapsed(true)})
 
     return (
       <Layout style={{ minHeight: '100vh' }} className="euclid_circular_b_font">
