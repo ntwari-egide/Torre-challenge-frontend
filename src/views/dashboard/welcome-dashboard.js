@@ -1,19 +1,18 @@
-import React,{useEffect,useState} from "react"
-import { Layout, Menu, Breadcrumb, Col, Row, Input,Slider, Carousel } from 'antd';
+import React,{useEffect} from "react"
+import { Col, Row } from 'antd';
 import { Bar } from "nivo";
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import Dashboard from "../../components/dashboard-component";
+import { Typography } from 'antd';
 
-const { Header, Content, Footer, Sider } = Layout;
-const { SubMenu } = Menu;
+const { Title } = Typography;
 
+const { Text } = Typography;
 
 const WelcomeDashboard = () => {
 
-    const [collapsed,setcollapsed] = useState(false)
+    let darkmode = window.localStorage.getItem('theme')
 
-    const [darkmode,setdarkmode] = useState('light')
-    
     const data = [
         {
             name: 'Text',
@@ -122,78 +121,76 @@ const WelcomeDashboard = () => {
     
 
     return (
-      <Dashboard>
-          <Col className={`dash-center-content-right ${ darkmode === 'dark'? "dark_mode_background":"" }`} span={18}>
-                            <h1 className={`main-header ${ darkmode === 'dark'? "pure_white_color":"" }`}>Welcome to <strong>Lot,</strong></h1>
+      <Dashboard dashboardName="Overview" active={1}>
+          
+                <Title className={`main-header ${ darkmode === 'dark'? "pure_white_color":"" }`}>Welcome to <strong>Lot,</strong></Title>
 
-                            <div className="poppins_font chart-container">
+                    <div className="poppins_font chart-container">
+                        <Title level={3} className={`${ darkmode === 'dark'? "pure_white_color":"" }`}>Success Map</Title>
 
-                                <h3 className={`${ darkmode === 'dark'? "pure_white_color":"" }`}>Success Map</h3>
+                        <ResponsiveContainer width="100%" height="90%">
+                            <LineChart
+                                width={500}
+                                height={300}
+                                data={data}
+                                margin={{
+                                    top: 5,
+                                    right: 30,
+                                    left: 20,
+                                    bottom: 5,
+                            }}
+                            >
+                        <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Legend>Success Map </Legend>
+                            <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
+                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+                            </LineChart>
+                        </ResponsiveContainer>
+                    </div>
 
-                                <ResponsiveContainer width="100%" height="90%">
-                                    <LineChart
-                                    width={500}
-                                    height={300}
-                                    data={data}
-                                    margin={{
-                                        top: 5,
-                                        right: 30,
-                                        left: 20,
-                                        bottom: 5,
-                                    }}
-                                    >
-                                    <CartesianGrid strokeDasharray="3 3" />
-                                    <XAxis dataKey="name" />
-                                    <YAxis />
-                                    <Tooltip />
-                                    <Legend>Success Map </Legend>
-                                    <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-                                    <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                                    </LineChart>
-                                </ResponsiveContainer>
-                            </div>
-
-                            <Row>
-                                <Col className="summary-container dark_blue_backgroun" span={8}>
-                                    <h4 className="pure_white_color">EMPLOYERS</h4>
-                                    <h2 className="light_green_color">36</h2>
-                                    <p className="pure_white_color">Employers finds their employees through us</p>
-                                </Col>
-                                <Col className="summary-container dark_blue_backgroun this" span={7}>
-                                    <h4 className="pure_white_color">EMPLOYERS</h4>
-                                    <h2 className="light_green_color">36</h2>
-                                    <p className="pure_white_color">Employers finds their employees through us</p>
-                                </Col>
-                                <Col className="summary-container dark_blue_backgroun this" span={7}>
-                                    <h4 className="pure_white_color">EMPLOYERS</h4>
-                                    <h2 className="light_green_color">36</h2>
-                                    <p className="pure_white_color">Employers finds their employees through us</p>
-                                </Col>
-                            </Row>
-
-                            <div className="poppins_font chart-container chart-container-2">
-
-                                <h3 className={`${ darkmode === 'dark'? "pure_white_color":"" }`}>Student Rates</h3>
-
-                                <Bar
-                                    data={newdata}
-                                    keys={["students"]}
-                                    colors={[darkmode == 'dark'? '#00FFEB': '#0028AF']}
-                                    width={450}
-                                    height={320}
-                                    padding={0.5}
-                                    margin={{
-                                        top: 30,
-                                        right: 0,
-                                        bottom: 50,
-                                        left: 50
-                                    }}
-                                    enableLabel={false}
-                                    enableGridY={true}
-                                    />
-                            </div>
-
+                    <Row>
+                        <Col className="summary-container dark_blue_backgroun" span={8}>
+                            <Title level={4} className="pure_white_color">EMPLOYERS</Title>
+                            <Title level={2} className="light_green_color">36</Title>
+                            <Text className="pure_white_color">Employers finds their employees through us</Text>
                         </Col>
+                        <Col className="summary-container dark_blue_backgroun this" span={7}>
+                            <Title level={4} className="pure_white_color">EMPLOYERS</Title>
+                            <Title level={2} className="light_green_color">36</Title>
+                            <Text className="pure_white_color">Employers finds their employees through us</Text>
+                        </Col>
+                        <Col className="summary-container dark_blue_backgroun this" span={7}>
+                           <Title level={4} className="pure_white_color">EMPLOYERS</Title>
+                            <Title level={2} className="light_green_color">36</Title>
+                            <Text className="pure_white_color">Employers finds their employees through us</Text>
+                        </Col>
+                        
+                    </Row>
+
+                    <div className="poppins_font chart-container chart-container-2">
+
+                        <Title level={3} className={`${ darkmode === 'dark'? "pure_white_color":"" }`}>Student Rates</Title>
+
+                        <Bar
+                            data={newdata}
+                            keys={["students"]}
+                            colors={[darkmode === 'dark'? '#00FFEB': '#0028AF']}
+                            width={450}
+                            height={320}
+                            padding={0.5}
+                            margin={{
+                                top: 30,
+                                right: 0,
+                                bottom: 50,
+                                left: 50
+                            }}
+                            enableLabel={false}
+                            enableGridY={true}
+                        />
+                </div>
       </Dashboard>
     )
 }

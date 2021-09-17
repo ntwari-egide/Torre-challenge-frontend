@@ -78,3 +78,31 @@
 .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
     background-color: #1B27AF !important;
 }
+
+.margin_top_10 {
+    margin-top: 1em !important;
+}
+
+.margin_left_10 {
+    margin-left: 1em;
+}
+
+.no_margin_left{
+    margin-left: 0 !important;
+}
+
+.bg_transparent{
+    background: rgba(255, 255, 255, 0.062) !important;
+}
+
+.cursor_pointer{
+    cursor: pointer;
+}
+
+.font_weight_normal{
+    font-weight: 600;
+}
+
+.dark_hard_blue_color{
+    color: #000860;
+}
