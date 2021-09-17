@@ -6,13 +6,16 @@ import Logo from '../../assets/lot-logo.svg'
 import { Form, Input, Button, Radio } from 'antd';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 
 const LoginComponent = () => {
 
-  const [form] = Form.useForm();
+    const [form] = Form.useForm();
  
+    let history = useHistory()
 
+     window.localStorage.setItem('theme','light')
 
     return (
         <>
@@ -52,13 +55,11 @@ const LoginComponent = () => {
                         <p className="red_color italic font-bold forgot-pass">Forgot password?</p>
 
                         <Form.Item>
-                            <Button className="submit-button">Login</Button>
+                            <Button onClick={()=> history.push('/dashboard')} className="submit-button">Login</Button>
                         </Form.Item>
                         </Form>
 
                         <p className="goto-link poppins_font text-center">Don't have an account? <Link to={'/signup'}> Signup</Link> </p>
-
-                        
 
                     {/* end of loin form content */}
 

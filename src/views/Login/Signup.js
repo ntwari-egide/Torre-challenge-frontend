@@ -10,6 +10,8 @@ import { Link } from "react-router-dom";
 
 const SignupComponent = () => {
 
+    window.localStorage.setItem('theme','light')
+
   const [form] = Form.useForm();
  
     return (
@@ -74,7 +76,7 @@ const SignupComponent = () => {
                             </Col> 
                         </Row>
 
-                        <p className="goto-link poppins_font text-center">Already Have An Account? <Link to={'/signup'}> Signin</Link> </p>
+                        <p className="goto-link poppins_font text-center">Already Have An Account? <Link to={'/login'}> Signin</Link> </p>
                     {/* end of signup form content */}
 
                 </Col>
