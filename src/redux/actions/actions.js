@@ -2,27 +2,26 @@
  * @author: ntwari egide
  */
 
+import * as actionType from "./action-types"
+
  export const handlegetuserbyid =  async (userId) => {
 
-    const url = `api/v1/auth/sign-up`
+    const url = `/api/v1/users/${userId}`
 
     try {
-        await axios.post(url,body,{
+        await axios.get(url,{
             headers: headers
         })
         .then(res =>  {
-            credentials.issignupSuccessful = true
-            localStorage.setItem('Token',res.data.payload.accessToken)
-
-            message.success('Account is created successfully!')
+            return store.dispatch({
+                type: actionType.GET_USER_BY_ID,
+                payload: res.data
+            })
         })
 
-        return store.dispatch({
-            type: actiontypes.USER_SIGNUP,
-            payload: credentials
-        })
+        
     } catch (error) {
-        error.response ? credentials.errors = error.response.data.message: console.log('Error: ',error); 
+        error.response ?  console.log('Error: ',error) : ''; 
     }
 
 }
