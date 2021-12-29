@@ -2,8 +2,12 @@ import React from "react"
 import NavbarComponent from "../components/NavbarComponent"
 import { IoMdBicycle} from "react-icons/io"
 import {BiRun} from "react-icons/bi"
+import { useHistory } from "react-router-dom/cjs/react-router-dom.min"
 
 const UsersSkillsMainComponent = () => {
+
+    const history = useHistory()
+
     return (
         <>
             <div className="navbar">
@@ -21,12 +25,12 @@ const UsersSkillsMainComponent = () => {
                     <h3 className="skills-small-header ">Master/ Influencer</h3>
                 </div>
                 <div className="d-flex margin_left_10">
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
                 </div>
 
                 <div className="d-flex mato16  margin_left_10">
@@ -34,12 +38,12 @@ const UsersSkillsMainComponent = () => {
                     <h3 className="skills-small-header ">Proficient</h3>
                 </div>
                 <div className="d-flex margin_left_10">
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
-                    <div className="skills-container">software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
+                    <div className="skills-container cursor_pointer" onClick={()=> history.push("/skills-details")}>software development</div>
                 </div>
             </div>
         </>

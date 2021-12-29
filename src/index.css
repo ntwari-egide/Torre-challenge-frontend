@@ -133,3 +133,7 @@ img.people-profile {
 .d-flex.people-description {
   margin-top: 6px;
 }
+
+.cursor_pointer{
+  cursor: pointer;
+}
