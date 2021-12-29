@@ -11,13 +11,18 @@ import 'antd/dist/antd.css'; // or 'antd/dist/antd.less'
 import './index.css'
 import './styles/project-theme.css'
 import UsersSkillsMainComponent from './views/UsersSkills';
+import SkillsDetailsMainComponent from './views/SkillsDetails';
 
 function App() {
   return (
     <Router>
         <Switch>
-          <Route path="/">
+          <Route path="/" exact>
             <UsersSkillsMainComponent />
+          </Route>
+
+          <Route path="/skills-details">
+            <SkillsDetailsMainComponent />
           </Route>
         </Switch>
     </Router>
