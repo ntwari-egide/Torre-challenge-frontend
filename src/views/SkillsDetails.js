@@ -3,7 +3,9 @@ import SkillsNavbarComponent from "../components/SkillsNavbarComponent"
 const SkillsDetailsMainComponent = () => {
     return (
         <>
-            <SkillsNavbarComponent />
+            <div className="navbar">
+                <SkillsNavbarComponent />
+            </div>
         </>
     )
 }

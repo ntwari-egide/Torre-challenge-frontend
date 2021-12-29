@@ -79,6 +79,10 @@ h3.skills-small-header {
   margin-left: 13px;
 }
 
+.navbar{
+  font-family: 'muli';
+}
+
 .skills-container {
   background: #383b40;
   color: #bababa;
