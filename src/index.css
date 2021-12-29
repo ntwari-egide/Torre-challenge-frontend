@@ -1,21 +1,92 @@
-@import url('https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://use.typekit.net/bhq3lta.css");
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: muli, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #27292d !important;
+  margin: 0;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 
 .gutter-box {
   padding: 8px 0;
   background: #00a0e9;
+}
+
+.color-yellow{
+  color: #cddc39;
+}
+
+button.ant-btn.sign-in-button {
+  background: transparent;
+  color: #cddc39;
+  font-family: 'muli';
+  border: none;
+}
+
+.menu-icon {
+  margin-right: 12px;
+  padding-top: 5px;
+}
+
+.navbar-right-components.d-flex {
+  position: relative;
+  left: 85vw;
+}
+
+.navbar {
+  box-shadow: 0 2px 4px #0000005c;
+  padding: 10px;
+}
+
+.profile-section {
+  width: 10vw;
+  margin: auto;
+  padding-top: 3em;
+}
+
+img.profile {
+  /* border: 8px solid #5e626b; */
+  clip-path: polygon(45% 1.33975%,46.5798% .60307%,48.26352% .15192%,50% 0,51.73648% .15192%,53.4202% .60307%,55% 1.33975%,89.64102% 21.33975%,91.06889% 22.33956%,92.30146% 23.57212%,93.30127% 25%,94.03794% 26.5798%,94.48909% 28.26352%,94.64102% 30%,94.64102% 70%,94.48909% 71.73648%,94.03794% 73.4202%,93.30127% 75%,92.30146% 76.42788%,91.06889% 77.66044%,89.64102% 78.66025%,55% 98.66025%,53.4202% 99.39693%,51.73648% 99.84808%,50% 100%,48.26352% 99.84808%,46.5798% 99.39693%,45% 98.66025%,10.35898% 78.66025%,8.93111% 77.66044%,7.69854% 76.42788%,6.69873% 75%,5.96206% 73.4202%,5.51091% 71.73648%,5.35898% 70%,5.35898% 30%,5.51091% 28.26352%,5.96206% 26.5798%,6.69873% 25%,7.69854% 23.57212%,8.93111% 22.33956%,10.35898% 21.33975%);
+  -webkit-clip-path: polygon(45% 1.33975%,46.5798% .60307%,48.26352% .15192%,50% 0,51.73648% .15192%,53.4202% .60307%,55% 1.33975%,89.64102% 21.33975%,91.06889% 22.33956%,92.30146% 23.57212%,93.30127% 25%,94.03794% 26.5798%,94.48909% 28.26352%,94.64102% 30%,94.64102% 70%,94.48909% 71.73648%,94.03794% 73.4202%,93.30127% 75%,92.30146% 76.42788%,91.06889% 77.66044%,89.64102% 78.66025%,55% 98.66025%,53.4202% 99.39693%,51.73648% 99.84808%,50% 100%,48.26352% 99.84808%,46.5798% 99.39693%,45% 98.66025%,10.35898% 78.66025%,8.93111% 77.66044%,7.69854% 76.42788%,6.69873% 75%,5.96206% 73.4202%,5.51091% 71.73648%,5.35898% 70%,5.35898% 30%,5.51091% 28.26352%,5.96206% 26.5798%,6.69873% 25%,7.69854% 23.57212%,8.93111% 22.33956%,10.35898% 21.33975%)
+}
+
+h2.user-fullname.text-center {
+  color: white;
+  margin-top: 18px;
+  font-family: 'muli';
+  font-size: 17px;
+}
+
+.skills-sections{
+  font-family: 'muli';
+  margin-top: 2em;
+}
+
+h1.txt_normal.skills-interests-header.margin_left_10 {
+  font-size: 17px;
+  margin-top: 12px;
+  color: #ffffffcc;
+  font-family: 'muli';
+}
+
+h3.skills-small-header {
+  color: #aeaeae;
+  font-size: 16px;
+  margin-left: 13px;
+}
+
+.skills-container {
+  background: #383b40;
+  color: #bababa;
+  padding: 5px 13px;
+  border-radius: 21px;
+  margin-right: 10px;
+}
+
+.d-flex.mato16.margin_left_10 {
+  margin-top: 32px;
 }
