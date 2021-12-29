@@ -46,7 +46,7 @@ const SkillsDetailsMainComponent = () => {
                 <div className="d-flex other-related-people-container">
                     <img alt="" src={'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} className="people-profile" />
                     <div>
-                        <div className="d-flex">
+                        <div className="d-flex people-description">
                             <h3 className="proficient-header color-yellow">Khan Yu </h3>
                             <MdVerified color="white"/>
                         </div>
@@ -57,7 +57,7 @@ const SkillsDetailsMainComponent = () => {
                 <div className="d-flex other-related-people-container">
                     <img alt="" src={'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} className="people-profile" />
                     <div>
-                        <div className="d-flex">
+                        <div className="d-flex people-description">
                             <h3 className="proficient-header color-yellow">Khan Yu </h3>
                             <MdVerified color="white"/>
                         </div>

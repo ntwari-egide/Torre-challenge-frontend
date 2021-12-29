@@ -129,3 +129,7 @@ img.people-profile {
 .other-related-people-container{
   margin-top: 20px;
 }
+
+.d-flex.people-description {
+  margin-top: 6px;
+}
