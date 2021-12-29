@@ -1,6 +1,7 @@
 import SkillsNavbarComponent from "../components/SkillsNavbarComponent"
 import { IoMdBicycle} from "react-icons/io"
 import { Divider } from "antd"
+import {MdVerified} from "react-icons/md"
 
 const SkillsDetailsMainComponent = () => {
     return (
@@ -43,9 +44,23 @@ const SkillsDetailsMainComponent = () => {
                 <h3 className="proficient-header">Other people with this skill: </h3>
                 
                 <div className="d-flex other-related-people-container">
-                    <img src={'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} className="people-profile" />\
+                    <img src={'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} className="people-profile" />
                     <div>
-                        <h3 className="proficient-header color-yellow">Khan Yu </h3>
+                        <div className="d-flex">
+                            <h3 className="proficient-header color-yellow">Khan Yu </h3>
+                            <MdVerified color="white"/>
+                        </div>
+                        <h3 className="proficient-header">Web Developer </h3>
+                    </div>
+                </div>
+
+                <div className="d-flex other-related-people-container">
+                    <img src={'https://images.pexels.com/photos/1674752/pexels-photo-1674752.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940'} className="people-profile" />
+                    <div>
+                        <div className="d-flex">
+                            <h3 className="proficient-header color-yellow">Khan Yu </h3>
+                            <MdVerified color="white"/>
+                        </div>
                         <h3 className="proficient-header">Web Developer </h3>
                     </div>
                 </div>
